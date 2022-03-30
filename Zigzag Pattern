@@ -1,0 +1,39 @@
+import java.util.* ;
+
+class Zigzag{
+    void zigzag(int arr[],int n){
+        Arrays.sort(arr);
+        int i=1,temp,j;
+        while(i<n){
+            temp=arr[i];
+            arr[i+1]=arr[i];
+            arr[i]=temp;
+            i+=2;
+        }
+        System.out.println("After Sort:");
+        for(j=0;j<n;j++){
+		    System.out.print(arr[j]);
+		}
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the length of array:");
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		int i,x,j;
+		for(i=0;i<n;i++){
+		    System.out.println("Enter a no.:");
+		    x=sc.nextInt();
+		    arr[i]=x;
+		}
+		System.out.println("Before Sort:");
+		for(j=0;j<n;j++){
+		    System.out.print(arr[j]);
+		}
+		Zigzag z= new Zigzag();
+		z.zigzag(arr,n);
+	}
+}

@@ -1,0 +1,44 @@
+import java.util.*;
+class Bank{
+    private:
+    String name;
+    String address;
+    int accNo;
+    float balance;
+    static int an=1000;
+    public:
+    Bank(){
+        an++;
+        accNo=an;
+    }
+    void set(String n,String a,float b){
+        name=n;
+        address=a;
+        balace=b;
+    }
+    void get(){
+        System.out.print("Name:"+name+"\n");
+        System.out.print("Adress:"+address+"\n");
+        System.out.print("accNo:"+accNo+"\n");
+        System.out.print("balance"+balance+"\n");
+    }
+    void deposit(int amt){
+        balance+=amt;
+    }
+    void withdraw(int amt){
+        balance-=amt;
+    }
+    void setAddress(int a){
+        address=a;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    Bank arr[20]=new Bank();
+	    while(true){
+	        System.out.println("Press 1 to add user ")
+	    }
+	}
+}

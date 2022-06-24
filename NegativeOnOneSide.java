@@ -4,7 +4,7 @@ class NegSort{
         int i=0,temp,k;
         while(true){
             k=0;
-            for(int j=0;j<n;j++){
+            for(int j=0;j<n-1;j++){
                 if(arr[j]>0 && arr[j+1]<0){
                     temp=arr[j];
                     arr[j]=arr[j+1];
@@ -16,9 +16,9 @@ class NegSort{
                 break;
             }
         }
-        System.out.println("After Sort:");
+        System.out.println("\n After Sort:");
         for(int j=0;j<n;j++){
-		    System.out.print(arr[j]);
+		    System.out.print(arr[j]+" ");
 		}
     }
 }
@@ -38,7 +38,7 @@ public class Main
 		}
 		System.out.println("Before Sort:");
         for(j=0;j<n;j++){
-		    System.out.print(arr[j]);
+		    System.out.print(arr[j]+" ");
 		}
 		NegSort myobj=new NegSort();
 		myobj.neg_sort(arr,n);
